@@ -97,7 +97,7 @@ public class PersonController {
 
     //Extra. Hetzelfde probleem met RequestBody & RequestParam in Postman
     @GetMapping("/search")
-    public ResponseEntity<List<Person>> getPersonsContaining(@RequestParam String name) { // @RequestBody --> @RequestParam
+    public ResponseEntity<List<Person>> getPersonsContaining(@RequestBody String name) { // @RequestBody --> @RequestParam
         // Maak een Lijst waarin je de gevonden Persons kunt verzamelen
         List<Person> aggregator = new ArrayList<>();
         // Loop door de lijst om Persons waarvan de naam, of een gedeelte van de naam, overeenkomt met de parameter

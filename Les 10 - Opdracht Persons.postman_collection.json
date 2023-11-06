@@ -26,11 +26,23 @@
 		},
 		{
 			"name": "Search persons",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
 			"request": {
 				"method": "GET",
 				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "Albert",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
 				"url": {
-					"raw": "localhost:8080/persons/search?name=Gerard",
+					"raw": "localhost:8080/persons/search",
 					"host": [
 						"localhost"
 					],
@@ -42,7 +54,8 @@
 					"query": [
 						{
 							"key": "name",
-							"value": "Gerard"
+							"value": "Gerard",
+							"disabled": true
 						}
 					]
 				}
@@ -137,7 +150,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "\"Pietje\"",
+					"raw": "\"Albert\"",
 					"options": {
 						"raw": {
 							"language": "json"
